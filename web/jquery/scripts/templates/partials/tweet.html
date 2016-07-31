@@ -1,0 +1,24 @@
+<script id="tweet" type="text/html">
+    <div class="row padding-20">
+        <div class="col-md-12" >
+            <div class="panel panel-default panel-tweet">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Identificador: {{ tid }}</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4 pull-right">
+                                {{{ media }}}
+                            </div>
+                            <blockquote>
+                                <p>{{ text }}</p>
+                                <footer>{{ name }} em <br /><cite>{{ tcreated_at}}</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

@@ -1,0 +1,52 @@
+<section id="content">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Tweets <span class="label label-success" id="hashtag">{{ vm.model.hashtag }}</span></h1>
+        </div>
+    </div>
+    <div class="row padding-20">
+        <div class="col-md-12">
+            <form id="frm_search" ng-submit="vm.searchTweets()">
+                <div class="input-group panel-search">
+                    <input type="text" id="query" class="form-control input-lg" placeholder="Pesquisar por..." ng-model="vm.model.query">
+                      <span class="input-group-btn">
+                            <button class="btn btn-default btn-lg btn-search-tweets" type="submit"><i class="fa fa-search" /></i> Pesquisar</button>
+                      </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="tweets">
+        <div class="row padding-20" ng-repeat="tweet in vm.model.tweets">
+            <div class="col-md-12" >
+                <div class="panel panel-default panel-tweet">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Identificador: {{ tweet.tid }}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-4 pull-right" ng-if="tweet.media_url">
+                                    <img src="{{ tweet.media_url }}" class="media-tweet"/>
+                                </div>
+                                <blockquote>
+                                    <p>{{ tweet.text }}</p>
+                                    <footer>{{ tweet.name }} em <br /><cite>{{ tweet.tcreated_at}}</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row padding-20" >
+        <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-info btn-lg btn-load-tweets" ng-click="vm.loadTweets()"><i class="fa fa-twitter" /></i> Carregar mais tweets...</button>
+
+        </div>
+        <div class="col-md-12 text-center padding-10">
+            <button type="button" class="btn btn-default btn-sm btn-refresh" ng-click="vm.syncTweets()"><i class="fa fa-refresh"></i> Atualizar tweets</button>
+        </div>
+    </div>
+</section>

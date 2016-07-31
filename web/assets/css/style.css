@@ -1,0 +1,116 @@
+@media screen and (min-width: 768px)
+{
+    .header {
+        margin-bottom: 15px;
+    }
+}
+
+.loading {
+    width: 60px;
+    height: 60px;
+    background-image: url('../imgs/ajax_loader.gif');
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 20px;
+}
+
+nav > ul {
+    padding-top: 20px;
+}
+
+.logo {
+    max-height: 80px;
+}
+
+.footer {
+    margin-top: 30px;
+}
+
+.padding-10 {
+    padding-top: 10px;
+}
+
+.padding-20 {
+    padding-top: 20px;
+}
+
+.padding-50 {
+    padding-top: 50px;
+}
+
+.panel-tweet {
+    width: 80%;
+    margin: auto;
+}
+
+.media-tweet {
+    padding: 5px;
+    max-width: 100%;
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+}
+
+.panel-search {
+    width: 70%;
+    margin: auto;
+}
+
+.app-version {
+    padding: 15px;
+}
+
+.logo-versao {
+    max-width: 80%;
+}
+
+/***
+   UI Loading
+***/
+
+.loading-message {
+    display: inline-block;
+    min-width: 125px;
+    margin-left: -60px;
+    padding: 10px;
+    margin: 0 auto;
+    color: #000 !important;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.loading-message.loading-message-boxed {
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-message > span {
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+/***
+   OWL Caurosel
+***/
+.tweet-item-caurosel {
+    margin: 5px;
+}
+
+.media-caurosel {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    vertical-align: middle;
+}
