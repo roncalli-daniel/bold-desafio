@@ -19,7 +19,7 @@
 
         function initController() {
             vm.loadConfig();
-            vm.loadTweets();
+            vm.syncTweets();
         }
 
         vm.reset = function() {
@@ -64,7 +64,7 @@
                 vm.scrollTop();
 
                 if(r.data == 0) {
-                    toastr.warning('Nenhum tweet disponível para sincronização.');
+                    toastr.warning('Todos os últimos tweets já foram sincronizados.');
                 }
                 else if(r.data == 1) {
                     toastr.success('1 tweet foi sincronizado.');

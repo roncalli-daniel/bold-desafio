@@ -160,7 +160,7 @@ Home = {
                 callback_success: function (r) {
                     Home.load.reset();
                     if(r.data == 0) {
-                        toastr.warning('Nenhum tweet disponível para sincronização.');
+                        toastr.warning('Todos os últimos tweets já foram sincronizados.');
                     }
                     else if(r.data == 1) {
                         toastr.success('1 tweet foi sincronizado.');
@@ -217,8 +217,7 @@ Home = {
             Home.start.config();
             Home.start.triggers();
             Home.load.mustache();
-            Home.load.tweets();
-            Home.load.caurosel();
+            Home.actions.Sync();
         }
     }
 }
